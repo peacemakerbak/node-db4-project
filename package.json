@@ -4,6 +4,10 @@
   "scripts": {
     "start": "node index.js",
     "server": "nodemon index.js",
+    "migrate": "knex migrate:latest",
+    "rollback": "knex migrate:rollback",
+    "reset": "knex migrate:down && knex migrate:latest && knex migrate:up",
+    "seed": "knex seed:run"
   },
   "repository": {
     "type": "git",
